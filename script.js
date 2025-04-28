@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     cartItems.innerHTML = '';
     cart.forEach((item, idx) => {
-      const price = parseFloat(item.price.replace('$', ''));
+      const price = parseFloat(item.price.replace('EGP', ''));
       total += price;
       
       const cartItem = document.createElement('div');
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
       cartItems.appendChild(cartItem);
     });
     
-    totalAmount.textContent = `$${total.toFixed(2)}`;
+    totalAmount.textContent = `${total.toFixed(0)} EGP`;
   }
 
   // --- SEARCH AND CATEGORY FIX ---
