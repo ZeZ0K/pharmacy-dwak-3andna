@@ -315,9 +315,35 @@ document.addEventListener('DOMContentLoaded', function() {
   // Request form submission
   document.getElementById('requestForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('Thank you! We will contact you soon.');
+    
+    // Create and show popup message
+    const popup = document.createElement('div');
+    popup.className = 'popup-message';
+    popup.innerHTML = `
+      <div class="popup-content">
+        <span class="popup-close">&times;</span>
+        <h3>Thank You!</h3>
+        <p>We've received your request and will contact you soon.</p>
+        <button class="popup-button">OK</button>
+      </div>
+    `;
+    document.body.appendChild(popup);
+    
+    // Close popup when clicking X, OK button, or outside
+    popup.querySelector('.popup-close').addEventListener('click', () => {
+      document.body.removeChild(popup);
+    });
+    popup.querySelector('.popup-button').addEventListener('click', () => {
+      document.body.removeChild(popup);
+    });
+    popup.addEventListener('click', (e) => {
+      if (e.target === popup) {
+        document.body.removeChild(popup);
+      }
+    });
+    
     this.reset();
-    console.log("Request form submitted");
+    console.log("Request form submitted with popup");
   });
 
   // --- MODAL ESCAPE KEY ---
@@ -330,6 +356,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   // --- END MODAL ESCAPE KEY ---
+  
+  // Show logged-in user in header
+  const user = localStorage.getItem('glopha_loggedin_user');
+  const userDiv = document.querySelector('.header-user');
+  const signinLink = document.getElementById('signin-link');
+  
+  if (user && userDiv) {
+    userDiv.innerHTML = `<i class='fas fa-user-circle'></i> <span class='username'>${user}</span>`;
+    
+    // Change Sign In to Sign Out
+    if (signinLink) {
+      signinLink.textContent = 'Sign Out';
+      signinLink.href = '#';
+      signinLink.onclick = function(e) {
+        e.preventDefault();
+        localStorage.removeItem('glopha_loggedin_user');
+        window.location.reload();
+      };
+    }
+  } else if (userDiv) {
+    userDiv.style.display = 'none';
+    
+    // Make sure button is Sign In
+    if (signinLink) {
+      signinLink.textContent = 'Sign In';
+      signinLink.href = 'signin.html';
+      signinLink.onclick = null;
+    }
+  }
   
   console.log("Website initialization complete");
 });
