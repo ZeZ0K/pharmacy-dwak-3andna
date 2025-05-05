@@ -245,6 +245,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Display the modal
     modal.style.display = 'block';
     console.log("Modal displayed");
+
+    // Add event listener to modal's Add to Cart button
+    const modalAddToCartBtn = modal.querySelector('.add-to-cart');
+    // Remove previous listeners by cloning
+    const newBtn = modalAddToCartBtn.cloneNode(true);
+    modalAddToCartBtn.parentNode.replaceChild(newBtn, modalAddToCartBtn);
+    newBtn.addEventListener('click', function() {
+      addToCart({
+        name: medName,
+        price: modalPrice.textContent,
+        image: modalImage.src
+      });
+      console.log(`Added ${medName} to cart from modal`);
+    });
   };
 
   function getMedDescription(medName) {

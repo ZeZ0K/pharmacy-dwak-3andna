@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In - Dwak 3andna</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .signin-container {
+      max-width: 400px;
+      margin: 60px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px #e0eafc88;
+      padding: 32px 28px 28px 28px;
+      text-align: center;
+      border: 1px solid #e3f0fb;
+    }
+    .signin-container h2 {
+      color: #2196f3;
+      margin-bottom: 18px;
+    }
+    .signin-container input[type="text"],
+    .signin-container input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border: 1px solid #b0d0ff;
+      font-size: 1em;
+      background: #f7fafd;
+      transition: border 0.15s;
+    }
+    .signin-container input:focus {
+      border: 1.5px solid #2196f3;
+      outline: none;
+    }
+    .signin-container button {
+      width: 100%;
+      padding: 10px;
+      background: #2196f3;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-top: 16px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .signin-container button:hover {
+      background: #1565c0;
+    }
+    .success-message {
+      color: #2e7d32;
+      background: #e8f5e9;
+      border-radius: 4px;
+      padding: 12px;
+      margin-top: 18px;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="signin-container">
+    <h2>Sign In</h2>
+    <form id="signinForm">
+      <input type="text" placeholder="Username" id="usernameInput" required><br>
+      <input type="password" placeholder="Password" required><br>
+      <button type="submit">Sign In</button>
+    </form>
+    <div class="success-message" id="successMsg">Signed in successfully! 🎉</div>
+  </div>
+  <script>
+    document.getElementById('signinForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var username = document.getElementById('usernameInput').value;
+      localStorage.setItem('dwak_loggedin_user', username);
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html> 

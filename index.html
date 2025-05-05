@@ -9,6 +9,7 @@
 <body>
   <header>
     <div class="logo"> <span class="plus">+</span> DWAK 3ANDNA </div>
+    <div class="header-user"></div>
     <div class="search-cart-group">
       <div class="search-container">
         <input type="text" id="searchInput" placeholder="Search medications...">
@@ -16,6 +17,7 @@
       </div>
       <div class="cart-icon">
         <i class="fas fa-shopping-cart"></i>
+        <span class="cart-label">Cart</span>
         <span class="cart-count">0</span>
       </div>
     </div>
@@ -28,6 +30,14 @@
     </nav>
   </header>
   <main>
+    <section class="hero-section">
+      <img src="img/homepage.png" alt="Online Pharmacy Banner" class="hero-img">
+      <div class="hero-overlay">
+        <h1 class="hero-title">Online <span>pharmacy</span></h1>
+        <p class="hero-sub">*Free delivery on all orders</p>
+        <a href="#medications" class="hero-btn">Shop Now</a>
+      </div>
+    </section>
     <section id="home"></section>
     <h1 id="medications">Available Medications</h1>
     <div class="category-cards">
@@ -54,7 +64,7 @@
     </div>
     <div class="medications category-group" id="pain" style="">
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Panadol" alt="Panadol">
+        <img src="img/100349_2.webp" alt="Panadol">
         <h2>Panadol <span class="arabic-name">بانادول</span></h2>
         <div class="price">35 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -62,7 +72,7 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Brufen" alt="Brufen">
+        <img src="img/101690.webp" alt="Brufen">
         <h2>Brufen <span class="arabic-name">بروفين</span></h2>
         <div class="price">45 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -72,7 +82,7 @@
     </div>
     <div class="medications category-group" id="antibiotics" style="display:none;">
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Amoclan" alt="Amoclan">
+        <img src="img/AMOCLAN20625MG20TAB201527S.webp" alt="Amoclan">
         <h2>Amoclan <span class="arabic-name">اموكلان</span></h2>
         <div class="price">95 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -80,7 +90,7 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Flagyl" alt="Flagyl">
+        <img src="img/100880_1.webp" alt="Flagyl">
         <h2>Flagyl <span class="arabic-name">فلاجيل</span></h2>
         <div class="price">50 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -88,7 +98,7 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Fucidin" alt="Fucidin">
+        <img src="img/100499_2.webp" alt="Fucidin">
         <h2>Fucidin <span class="arabic-name">فويسدين</span></h2>
         <div class="price">120 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -98,7 +108,7 @@
     </div>
     <div class="medications category-group" id="allergy" style="display:none;">
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Zyrtec" alt="Zyrtec">
+        <img src="img/zyrtec-10-mg-20-tab-1642424493.webp" alt="Zyrtec">
         <h2>Zyrtec <span class="arabic-name">زيرتك</span></h2>
         <div class="price">65 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -106,7 +116,7 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Claritin+Syrup" alt="Claritin Syrup">
+        <img src="img/100549_1.webp" alt="Claritin Syrup">
         <h2>Claritin Syrup <span class="arabic-name">كلارتين شراب</span></h2>
         <div class="price">85 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -114,7 +124,7 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Cosopt+Eye+Drops" alt="Cosopt Eye Drops">
+        <img src="img/102767.webp" alt="Cosopt Eye Drops">
         <h2>Cosopt Eye Drops <span class="arabic-name">كوزوبت قطرة</span></h2>
         <div class="price">175 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -124,7 +134,7 @@
     </div>
     <div class="medications category-group" id="digestive" style="display:none;">
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Motilium" alt="Motilium">
+        <img src="img/101193_1.webp" alt="Motilium">
         <h2>Motilium <span class="arabic-name">موتيليوم</span></h2>
         <div class="price">60 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -132,7 +142,7 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Nanazoxid" alt="Nanazoxid">
+        <img src="img/nanazoxid-antifungal-100mg-5ml-susp-60ml-01719672667.webp" alt="Nanazoxid">
         <h2>Nanazoxid <span class="arabic-name">نانازوكسيد</span></h2>
         <div class="price">70 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -140,7 +150,7 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Cidostone+Injection" alt="Cidostone Injection">
+        <img src="img/100684.webp" alt="Cidostone Injection">
         <h2>Cidostone Injection <span class="arabic-name">سيدوستون حقن</span></h2>
         <div class="price">145 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -150,7 +160,7 @@
     </div>
     <div class="medications category-group" id="specialty" style="display:none;">
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Silconzoc" alt="Silconzoc">
+        <img src="img/103056.webp" alt="Silconzoc">
         <h2>Silconzoc <span class="arabic-name">سيلكونزوك</span></h2>
         <div class="price">130 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -158,7 +168,7 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Eltroxin" alt="Eltroxin">
+        <img src="img/08b594_34315f6020124728bd6efa2f7e8af3f3_mv2_24951e4c-de26-480a-a944-56dd74d9b759.webp" alt="Eltroxin">
         <h2>Eltroxin <span class="arabic-name">التروكسين</span></h2>
         <div class="price">90 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -166,7 +176,7 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Atozet" alt="Atozet">
+        <img src="img/100752.webp" alt="Atozet">
         <h2>Atozet <span class="arabic-name">اتوزيت</span></h2>
         <div class="price">280 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -174,7 +184,7 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Actemra" alt="Actemra">
+        <img src="img/37c5686de4d802687bf3074ff1b11007.webp" alt="Actemra">
         <h2>Actemra <span class="arabic-name">اكتيمرا</span></h2>
         <div class="price">1200 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -182,7 +192,7 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Diprosalic" alt="Diprosalic">
+        <img src="img/image.webp" alt="Diprosalic">
         <h2>Diprosalic <span class="arabic-name">ديبروساليك</span></h2>
         <div class="price">75 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -190,7 +200,7 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Keppra" alt="Keppra">
+        <img src="img/101459.webp" alt="Keppra">
         <h2>Keppra <span class="arabic-name">كيبرا</span></h2>
         <div class="price">350 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -198,7 +208,7 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="med-card">
-        <img src="https://via.placeholder.com/80x80?text=Fucidin" alt="Fucidin">
+        <img src="img/100499_2.webp" alt="Fucidin">
         <h2>Fucidin <span class="arabic-name">فويسدين</span></h2>
         <div class="price">120 EGP</div>
         <div class="stock in-stock">In Stock</div>
@@ -271,5 +281,19 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    // Show logged-in user in header
+    const user = localStorage.getItem('dwak_loggedin_user');
+    const userDiv = document.querySelector('.header-user');
+    if (user && userDiv) {
+      userDiv.innerHTML = `<i class='fas fa-user-circle'></i> <span class='username'>${user}</span> <button id='logoutBtn'>Logout</button>`;
+      document.getElementById('logoutBtn').onclick = function() {
+        localStorage.removeItem('dwak_loggedin_user');
+        window.location.reload();
+      };
+    } else if (userDiv) {
+      userDiv.style.display = 'none';
+    }
+  </script>
 </body>
 </html>
